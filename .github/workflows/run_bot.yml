@@ -10,17 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout cod
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setare Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Instalare biblioteci
+      - name: Actualizare Pip și Instalare Biblioteci
         run: |
-          pip install --upgrade pip
-          pip install yfinance pandas numpy xgboost scikit-learn requests
+          python -m pip install --upgrade pip
+          python -m pip install yfinance pandas numpy xgboost scikit-learn requests
 
       - name: Rulare Bot Live
         env:
