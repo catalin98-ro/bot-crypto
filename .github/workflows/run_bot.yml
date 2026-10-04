@@ -19,6 +19,7 @@ jobs:
 
       - name: Instalare biblioteci
         run: |
+          pip install --upgrade pip
           pip install yfinance pandas numpy xgboost scikit-learn requests
 
       - name: Rulare Bot Live
